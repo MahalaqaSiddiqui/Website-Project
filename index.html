@@ -1,0 +1,406 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pakistan Property Finder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+
+   <div class="logo">
+    <img src="Logo.jpg" alt="Property Finder Logo">
+    <span>PropertyFinder</span>
+    
+</div>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#properties">Properties</a>
+        <a href="#services">Services</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#agents">Agents</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</div>
+
+<!-- HERO (SLIDER) -->
+<div id="home" class="hero-slider">
+
+    <!-- Radio Buttons -->
+    <input type="radio" name="heroSlide" id="h1" checked>
+    <input type="radio" name="heroSlide" id="h2">
+    <input type="radio" name="heroSlide" id="h3">
+    <input type="radio" name="heroSlide" id="h4">
+
+    <!-- Slides -->
+    <div class="hero-slides">
+        <div class="hero-slide" style="background-image:url(b3.avif)"></div>
+        <div class="hero-slide" style="background-image:url('b4.avif')"></div>
+        <div class="hero-slide" style="background-image:url('b12.avif')"></div>
+        <div class="hero-slide" style="background-image:url('b6.avif')"></div>
+    </div>
+
+    <!-- Content -->
+    <div class="hero-content">
+        <h1>Find Your Dream Home in Pakistan</h1>
+        <p>Trusted platform for buying, selling & renting properties</p>
+
+    <!-- Search Box -->
+        <div class="search-box">
+            <input type="text" id="location" placeholder="Enter city like Karachi, Lahore, Islamabad">
+            <button onclick="searchProperty()">Search</button>
+        </div>
+    </div>
+
+    <!-- Dots-->
+    <div class="hero-dots">
+        <label for="h1"></label>
+        <label for="h2"></label>
+        <label for="h3"></label>
+        <label for="h4"></label>
+    </div>
+
+</div>
+
+<!-- POPULAR PROPERTIES -->
+<div id="properties" class="popular">
+    <h2>Popular Properties in Pakistan</h2>
+
+    <div class="property-slider">
+        <button class="prev" onclick="moveSlide(-1)">❮</button>
+
+        <div class="property-slides-container">
+            <div class="property-slides">
+
+                <!-- PROPERTY 1 -->
+                <div class="card" 
+                    data-rooms="3" 
+                    data-bathrooms="2" 
+                    data-kitchen="1" 
+                    data-area="120 Sq Yards">
+                    <img src="house1.jpg">
+                    <h3>Rs 1,25,00,000</h3>
+                    <p>Gulshan-e-Iqbal, Karachi</p>
+                    <button onclick="openPropertyDetails(this)">See details</button>
+                </div>
+
+                <!-- PROPERTY 2 -->
+                <div class="card"
+                data-rooms="4"
+                data-bathrooms="2"
+                data-kitchen="2"
+                data-area="120 Sq Yards">
+                    <img src="house2.jpg">
+                    <h3>Rs 2,80,00,000</h3>
+                    <p>DHA Phase 5, Lahore</p>
+                    <button onclick="openPropertyDetails(this)">See details</button>
+                </div>
+
+                <!-- PROPERTY 3 -->
+                <div class="card"
+                    data-rooms="4"
+                    data-bathrooms="2"
+                    data-kitchen="2"
+                    data-area="150 Sq Yards">
+                    <img src="house3.jpg">
+                    <h3>Rs 3,50,00,000</h3>
+                    <p>F-7, Islamabad</p>
+                    <button onclick="openPropertyDetails(this)">See details</button>
+                </div>
+
+                <!-- PROPERTY 4 -->
+                <div class="card"
+                data-rooms="4"
+                data-bathrooms="2"
+                data-kitchen="2"
+                data-area="125 Sq Yards">
+                    <img src="house4.jpg">
+                    <h3>Rs 95,00,000</h3>
+                    <p>Gulberg, Lahore</p>
+                <button onclick="openPropertyDetails(this)">See details</button>
+                </div>
+
+                <!-- PROPERTY 5 -->
+                <div class="card"
+                data-rooms="4"
+                data-bathrooms="2"
+                data-kitchen="2"
+                data-area="150 Sq Yards">
+                    <img src="house5.jpg">
+                    <h3>Rs 1,80,00,000</h3>
+                    <p>Bahria Town, Karachi</p>
+                <button onclick="openPropertyDetails(this)">See details</button>
+                </div>
+
+                <!-- PROPERTY 6 -->
+               <div class="card"
+                data-rooms="4"
+                data-bathrooms="2"
+                data-kitchen="2"
+                data-area="150 Sq Yards">
+                    <img src="house6.jpg">
+                    <h3>Rs 2,10,00,000</h3>
+                    <p>F-10, Islamabad</p>
+                <button onclick="openPropertyDetails(this)">See details</button>
+                </div>
+
+                <!-- PROPERTY 7 -->
+                <div class="card"
+                data-rooms="4"
+                data-bathrooms="2"
+                data-kitchen="2"
+                data-area="150 Sq Yards">
+                    <img src="house7.jpg">
+                    <h3>Rs 75,00,000</h3>
+                    <p>North Nazimabad, Karachi</p>
+                <button onclick="openPropertyDetails(this)">See details</button>
+                </div>
+
+                <!-- PROPERTY 8 -->
+                <div class="card"
+                    data-rooms="4"
+                    data-bathrooms="2"
+                    data-kitchen="2"
+                    data-area="150 Sq Yards">
+                    <img src="house8.jpg">
+                    <h3>Rs 4,20,00,000</h3>
+                    <p>DHA Phase 6, Lahore</p>
+                    <button onclick="openPropertyDetails(this)">See details</button>
+                </div>
+
+                <!-- PROPERTY 9 -->
+                <div class="card"
+                    data-rooms="4"
+                    data-bathrooms="2"
+                    data-kitchen="2"
+                    data-area="125 Sq Yards">
+                    <img src="house9.jpg">
+                    <h3>Rs 1,60,00,000</h3>
+                    <p>I-8, Islamabad</p>
+                    <button onclick="openPropertyDetails(this)">See details</button>
+                </div>
+
+                <!-- PROPERTY 10 -->
+                <div class="card"
+                    data-rooms="5"
+                    data-bathrooms="4"
+                    data-kitchen="2"
+                    data-area="250 Sq Yards">
+                    <img src="house10.jpg">
+                    <h3>Rs 1,10,00,000</h3>
+                    <p>Johar Town, Lahore</p>
+                    <button onclick="openPropertyDetails(this)">See details</button>
+                </div>
+
+            </div>
+        </div>
+            <button class="next" onclick="moveSlide(1)">❯</button>
+    </div>
+</div>
+
+
+<!-- SERVICES -->
+<div id="services" class="services">
+    <h2>Our Services</h2>
+    <div class="services-list">
+        <div class="service-card"><h3>Buying</h3><p>Find verified homes.</p></div>
+        <div class="service-card"><h3>Selling</h3><p>Sell faster with agents.</p></div>
+        <div class="service-card"><h3>Renting</h3><p>Best rental deals.</p></div>
+        <div class="service-card"><h3>Management</h3><p>Property care service.</p></div>
+    </div>
+</div>
+
+<!-- STATS -->
+<div class="stats">
+    <div class="stat-box">
+        <h2>3,298</h2>
+        <p># of Buy Properties</p>
+    </div>
+    <div class="stat-box">
+        <h2>2,181</h2>
+        <p># of Sell Properties</p>
+    </div>
+    <div class="stat-box">
+        <h2>9,316</h2>
+        <p># of All Properties</p>
+    </div>
+    <div class="stat-box">
+        <h2>7,191</h2>
+        <p># of Agents</p>
+    </div>
+</div>
+
+<!-- AGENT JOB OFFER -->
+<div class="agent-cta">
+    <h2>Be a part of our growing company agents</h2>
+    <button onclick="openJobForm()">Apply for Real Estate Agent</button>
+
+</div>
+
+<!-- JOB APPLY MODAL -->
+<div id="jobModal" class="job-modal">
+    <div class="job-modal-content">
+        <span class="close-btn" onclick="closeJobForm()">&times;</span>
+        
+        <h2>Apply as Real Estate Agent</h2>
+
+        <form id="jobForm" onsubmit="submitJobForm(event)" action="https://formsubmit.co/dirozofu@mailgolem.com"
+            method="POST">
+            <input type="text" placeholder="Full Name" required>
+            <input type="email" placeholder="Email Address" required>
+            <input type="tel" placeholder="Phone Number" required>
+            <input type="text" placeholder="City" required>
+
+            <select required>
+                <option value="">Experience Level</option>
+                <option>Fresher</option>
+                <option>1-2 Years</option>
+                <option>3-5 Years</option>
+                <option>5+ Years</option>
+            </select>
+
+            <textarea placeholder="Why do you want to join us?" required></textarea>
+
+            <button type="submit">Submit Application</button>
+        </form>
+        
+    </div>
+</div>
+
+<!-- AGENTS INTRO -->
+<div id="agents" class="agents">
+    <h2>Our Agents</h2>
+    <p>Meet our professional & trusted agents</p>
+
+    <!-- Agrnts List -->
+    <div class="agent-list">
+
+        <!-- Agents Card -->
+        <div class="agent-card">
+            <img src="HamzaAli.jpg">
+            <h3>Hamza Ali</h3>
+            <p>Real Estate Agent</p>
+            <div class="socials">
+            </div>
+        </div>
+
+        <div class="agent-card">
+            <img src="Samad.jpg">
+            <h3>Samad</h3>
+            <p>Real Estate Agent</p>
+            <div class="socials">
+            </div>
+        </div>
+
+        <div class="agent-card">
+            <img src="Alina.jpg">
+            <h3>Alina Hussain</h3>
+            <p>Real Estate Agent</p>
+            <div class="socials">
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- Reviews -->
+<div id="reviews" class="reviews">
+    <h2>Customer Reviews</h2>
+
+    <div class="review-cards">
+        <div class="review-card">
+            <img src="https://i.pravatar.cc/80?img=12" alt="Sheroz Khan">
+            <h3>Sheroz Khan</h3>
+            <p class="stars">★★★★★</p>
+            <p>I was completely impressed with their professionalism and customer service.</p>
+        </div>
+
+        <div class="more-reviews" style="display: none;">
+            <div class="review-card">
+                <img src="https://i.pravatar.cc/80?img=32" alt="Sara Khan">
+                <h3>Sara Khan</h3>
+                <p class="stars">★★★★★</p>
+                <p>Very helpful and attentive staff.</p>
+            </div>
+
+            <div class="review-card">
+                <img src="https://i.pravatar.cc/80?img=45" alt="Aman Khalil">
+                <h3>Aman Khalil</h3>
+                <p class="stars">★★★★★</p>
+                <p>They are reliable and trustworthy.</p>
+            </div>
+
+            <div class="review-card">
+                <img src="https://i.pravatar.cc/80?img=66" alt="Ali Haider">
+                <h3>Ali Haider</h3>
+                <p class="stars">★★★★★</p>
+                <p>I want to work with them again in the future.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- More Reviews Button -->
+    <button class="more-btn" onclick="toggleReviews()">More Reviews</button>
+</div>
+
+<!-- CONTACT -->
+<div id="contact" class="contact">
+    <h2>Contact an Agent</h2>
+    <form onsubmit="submitForm(event)">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea placeholder="Message" required></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+</div>
+
+<!-- PROPERTY DETAILS MODAL -->
+<div id="propertyModal" class="job-modal">
+    <div class="job-modal-content">
+        <span class="close-btn" onclick="closePropertyDetails()">&times;</span>
+
+        <h2>Property Details</h2>
+        <!-- JS will fill these dynamically -->
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+    </div>
+</div>
+
+<!-- FOOTER-->
+
+<footer class="footer">
+  <div class="footer-cols">
+    <div>
+      <h3>About Us</h3>
+      <p>Premium real estate solutions for modern living.</p>
+    </div>
+    <div>
+      <h3>Quick Links</h3>
+      <a href="#home">Home</a>
+    <a href="#services">Services</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#contact">Contact</a>
+
+    </div>
+    <div>
+      <h3>Contact</h3>
+      <p>Email: info@luxuryhomes.com</p>
+      <p>Phone: +1 234 567 890</p>
+    </div>
+  </div>
+  <div class="socials">
+    <span>F</span>
+    <span>T</span>
+    <span>I</span>
+  </div>
+  <p>&copy; 2025 Luxury Homes. All Rights Reserved.</p>
+</footer>
+
+<script src="javascript.js"></script>
+</body>
+</html>
